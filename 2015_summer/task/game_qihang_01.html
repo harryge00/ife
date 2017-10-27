@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>polandeme</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<script>
+	var map = {
+		1: "../asset/bu.jpg",
+		2: "../asset/jiandao.jpg",
+		0: "../asset/shitou.jpg"
+	};
+	var winTime = 0;
+function myFunction() {
+	var you = Math.floor(Math.random()*3);
+	var pc = Math.floor(Math.random()*3);
+	document.getElementById("pic1").src = map[you];
+	document.getElementById("pic3").src = map[pc];
+	var text;
+	if(you == (pc + 1) % 3) {
+		text = "YOU WIN";
+		winTime++;
+	} else if(you == pc) {
+		text = "YOU TIED";
+	} else {
+		text = "YOU LOSE";
+	}
+
+	document.getElementById("pic2").src = "";
+	document.getElementById("pic2").alt = text;
+    document.getElementById("number").innerHTML = winTime;
+}
+</script>
+<body>
+	Please click.  You have won <p id="number">0</p> times.
+	<img id="pic1", src="../asset/bu.jpg" />
+	<img id="pic2", src="../asset/jiandao.jpg" />
+	<img id="pic3", src="../asset/shitou.jpg" />
+
+	<button onclick="myFunction()">Click me</button>
+
+</body>
+</html>
