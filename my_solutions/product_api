@@ -1,0 +1,3 @@
+http://webservices.amazon.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=AKIAJIKZQ7G2GN26LB2Q&AssociateTag=[Associate ID]&Operation=ItemSearch&Keywords=the%20hunger%20games&SearchIndex=Books&Timestamp=2018-05-06T20:39:00Z&Signature=[Request Signature]
+
+2018-05-06T20:39:00Z
